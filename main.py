@@ -12,6 +12,7 @@ class App(customtkinter.CTk):
         self.geometry("1024x600")
         # self.bind("<Escape>", self.toggle_fullscreen)
         customtkinter.set_appearance_mode("Dark")
+        print(functions.print_debug_info(self))
         
         
 
