@@ -1,0 +1,82 @@
+[
+    {
+        "label": "Cosmopolitan",
+        "image": "Cosmopolitan.png"
+    },
+    {
+        "label": "Mojito",
+        "image": "Mojito.png"
+    },
+    {
+        "label": "Sex on the Beach",
+        "image": "SexOnTheBeach.png"
+    },
+    {
+        "label": "Margarita",
+        "image": "Margarita.png"
+    },
+    {
+        "label": "Piña Colada",
+        "image": "PinaColada.png"
+    },
+    {
+        "label": "Long Island Iced Tea",
+        "image": "LongIslandIcedTea.png"
+    },
+    {
+        "label": "Martini",
+        "image": "Martini.png"
+    },
+    {
+        "label": "Caipirinha",
+        "image": "Caipirinha.png"
+    },
+    {
+        "label": "Whiskey Sour",
+        "image": "WhiskeySour.png"
+    },
+    {
+        "label": "Bloody Mary",
+        "image": "BloodyMary.png"
+    },
+    {
+        "label": "Mai Tai",
+        "image": "MaiTai.png"
+    },
+    {
+        "label": "Blue Lagoon",
+        "image": "BlueLagoon.png"
+    },
+    {
+        "label": "Moscow Mule",
+        "image": "MoscowMule.png"
+    },
+    {
+        "label": "Mint Julep",
+        "image": "MintJulep.png"
+    },
+    {
+        "label": "Dark 'n' Stormy",
+        "image": "DarknStormy.png"
+    },
+    {
+        "label": "Daiquiri",
+        "image": "Daiquiri.png"
+    },
+    {
+        "label": "Manhattan",
+        "image": "Manhattan.png"
+    },
+    {
+        "label": "Old Fashioned",
+        "image": "OldFashioned.png"
+    },
+    {
+        "label": "Tom Collins",
+        "image": "TomCollins.png"
+    },
+    {
+        "label": "Gin Tonic",
+        "image": "GinTonic.png"
+    }
+]
