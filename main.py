@@ -8,7 +8,7 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("cocktailMakerDashboard.py")
+        self.title(f"cocktailMakerDashboard.py commit-hash: {functions.get_commit_hash(self)}")
         self.geometry("1024x600")
         # self.bind("<Escape>", self.toggle_fullscreen)
         customtkinter.set_appearance_mode("Dark")
