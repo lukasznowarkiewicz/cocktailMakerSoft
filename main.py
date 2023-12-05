@@ -9,12 +9,9 @@ from functools import partial
 
 class App(customtkinter.CTk):
 
-    frames = {}
-    current = None
-
     def __init__(self):
         super().__init__()
-        self.num_of_frames = 0
+        # self.num_of_frames = 0
         self.title(f"cocktailMakerDashboard.py commit-hash: {functions.get_commit_hash(self)}")
         self.geometry("1024x600")
         self.bind("<Escape>", self.toggle_fullscreen)
@@ -25,28 +22,46 @@ class App(customtkinter.CTk):
         with open('recipes.json', 'r') as recipes_json:
             recipes_data = json.load(recipes_json)
 
-        # root!
-        self.main_container = customtkinter.CTkFrame(self, corner_radius=8, fg_color="transparent")
-        self.main_container.pack(fill=tkinter.BOTH, expand=True, padx=8, pady=8)
+        # # root!
+        # self.main_container = customtkinter.CTkFrame(self, corner_radius=8, fg_color="transparent")
+        # self.main_container.pack(fill=tkinter.BOTH, expand=True, padx=8, pady=8)
 
-        # home frame - showing options
-        self.home_frame = customtkinter.CTkFrame(self.main_container, width=1020, height=580, corner_radius=0, fg_color="transparent")
-        self.home_frame.grid(row=0, column=0, sticky="nesw")
+        # # home frame - showing options
+        # self.home_frame = customtkinter.CTkFrame(self.main_container, width=1020, height=580, corner_radius=0, fg_color="transparent")
+        # self.home_frame.grid(row=0, column=0, sticky="nesw")
 
-        self.preparing_frame = customtkinter.CTkFrame(self.main_container, corner_radius=0, fg_color="transparent")
+        # self.preparing_frame = customtkinter.CTkFrame(self.main_container, corner_radius=0, fg_color="transparent")
 
-        # Button creation and placement with added padding
-        for idx, button_data in enumerate(recipes_data):
-            # self.image = customtkinter.CTkImage(Image.open(os.path.join(image_path, button_data["image"])), size=(120, 120))
-            label = button_data["label"]
-            #image = button_data["image"]
-            btn = customtkinter.CTkButton(self.home_frame, text=label, compound="top", font=("arial", 18), border_spacing=10)
-            btn.grid(row=idx // 5, column=idx % 5, padx=5, pady=5)
-            btn.configure(height = 120, width = 192)
-            btn.configure(command =  partial( self.toggle_frame_by_id,  "frame_" + str(self.num_of_frames + 1) ) )
-            self.num_of_frames = self.num_of_frames + 1
-            self.create_frame(f"frame_{self.num_of_frames}", 'blue')
-            # self.create_nav(main_container, "label","blue")
+        # # Button creation and placement with added padding
+        # for idx, button_data in enumerate(recipes_data):
+        #     # self.image = customtkinter.CTkImage(Image.open(os.path.join(image_path, button_data["image"])), size=(120, 120))
+        #     label = button_data["label"]
+        #     #image = button_data["image"]
+        #     btn = customtkinter.CTkButton(self.home_frame, text=label, compound="top", font=("arial", 18), border_spacing=10)
+        #     btn.grid(row=idx // 5, column=idx % 5, padx=5, pady=5)
+        #     btn.configure(height = 120, width = 192)
+        #     btn.configure(command =  partial( self.toggle_frame_by_id,  "frame_" + str(self.num_of_frames + 1) ) )
+        #     self.num_of_frames = self.num_of_frames + 1
+        #     self.create_frame(f"frame_{self.num_of_frames}", 'blue')
+        #     # self.create_nav(main_container, "label","blue")
+
+        container = customtkinter.CTkFrame(self)
+        container.pack(side="top", fill="both", expand=True)
+        container.grid_rowconfigure(0, weight=1)
+        container.grid_columnconfigure(0, weight=1)
+
+        self.frames = {}
+        for F in (StartPage, PageOne, PageTwo):
+            page_name = F.__name__
+            frame = F(parent=container, controller=self)
+            self.frames[page_name] = frame
+
+            # put all of the pages in the same location;
+            # the one on the top of the stacking order
+            # will be the one that is visible.
+            frame.grid(row=0, column=0, sticky="nsew")
+
+        self.show_frame("StartPage")
 
 
         
@@ -100,7 +115,49 @@ class App(customtkinter.CTk):
     def toggle_fullscreen(self, event=None):
         is_fullscreen = self.attributes('-fullscreen')
         self.attributes('-fullscreen', not is_fullscreen)
+    
+    def show_frame(self, page_name):
+        '''Show a frame for the given page name'''
+        frame = self.frames[page_name]
+        frame.tkraise()
         
+
+class StartPage(customtkinter.CTkFrame):
+    def __init__(self, parent, controller):
+        customtkinter.CTkFrame.__init__(self, parent)
+        self.controller = controller
+        label = customtkinter.CTkLabel(self, text="This is the start page")
+        label.pack(side="top", fill="x", pady=10)
+
+        button1 = customtkinter.CTkButton(self, text="Go to Page One",
+                            command=lambda: controller.show_frame("PageOne"))
+        button2 = customtkinter.CTkButton(self, text="Go to Page Two",
+                            command=lambda: controller.show_frame("PageTwo"))
+        button1.pack()
+        button2.pack()
+        
+class PageOne(customtkinter.CTkFrame):
+
+    def __init__(self, parent, controller):
+        customtkinter.CTkFrame.__init__(self, parent)
+        self.controller = controller
+        label = customtkinter.CTkLabel(self, text="This is page 1")
+        label.pack(side="top", fill="x", pady=10)
+        button = customtkinter.CTkButton(self, text="Go to the start page",
+                           command=lambda: controller.show_frame("StartPage"))
+        button.pack()
+
+
+class PageTwo(customtkinter.CTkFrame):
+
+    def __init__(self, parent, controller):
+        customtkinter.CTkFrame.__init__(self, parent)
+        self.controller = controller
+        label = customtkinter.CTkLabel(self, text="This is page 2")
+        label.pack(side="top", fill="x", pady=10)
+        button = customtkinter.CTkButton(self, text="Go to the start page",
+                           command=lambda: controller.show_frame("StartPage"))
+        button.pack()
 
 if __name__ == "__main__":
     app = App()
