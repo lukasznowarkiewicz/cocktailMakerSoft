@@ -17,15 +17,10 @@ class StartPage(customtkinter.CTkFrame):
         # label.pack(side="top", fill="x", pady=10)
         self.grid(row=0, column=0, sticky="nesw")
 
-        button1 = customtkinter.CTkButton(self, text="Go to Page One",
-                            command=lambda: controller.show_frame("PageOne"))
         button2 = customtkinter.CTkButton(self, text="Go to Page Two",
                             command=lambda: controller.show_frame("PageTwo"))
         
-        button1.grid(row=0, column=0)
         button2.grid(row=0, column=0)
-        # button1.pack()
-        # button2.pack()
 
         # json data import of the recipes
         with open('recipes.json', 'r') as recipes_json:

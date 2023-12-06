@@ -30,7 +30,7 @@ class App(customtkinter.CTk):
         container.grid_columnconfigure(0, weight=1)
 
         self.frames = {}
-        for F in (frame_start.StartPage, frame_details.Details, frame_preparing.PageTwo):
+        for F in (frame_start.StartPage, frame_details.Details, frame_preparing.Preparing):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame

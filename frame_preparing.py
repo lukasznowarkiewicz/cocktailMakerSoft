@@ -6,7 +6,7 @@ import functions
 import tkinter
 from functools import partial
 
-class PageTwo(customtkinter.CTkFrame):
+class Preparing(customtkinter.CTkFrame):
 
     def __init__(self, parent, controller):
         customtkinter.CTkFrame.__init__(self, parent)
