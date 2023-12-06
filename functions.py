@@ -30,4 +30,4 @@ def print_debug_info(self):
                 print(package)
                 
         except subprocess.CalledProcessError as e:
-            print(f"Error retrieving installed package versions: {e}")
+            print(f"Error retrieving installed package versions: {e}")     

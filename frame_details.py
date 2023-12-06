@@ -16,7 +16,9 @@ class Details(customtkinter.CTkFrame):
         button = customtkinter.CTkButton(self, text="Return to drink choice",
                            command=lambda: controller.show_frame("StartPage"))
         button.pack()
-
+        button2 = customtkinter.CTkButton(self, text="Make it!",
+                           command=lambda: controller.show_frame("Preparing"))
+        button2.pack()
 
         # customtkinter.CTkFrame.__init__(self, parent)
         # self.controller = controller
