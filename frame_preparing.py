@@ -18,7 +18,9 @@ class Preparing(customtkinter.CTkFrame):
                            command=lambda: controller.show_frame("StartPage"))
         button.pack(side="top", fill="x", pady=20)
 
+        
+        button2 = customtkinter.CTkButton(self, text="Prepare",
+                           command=lambda: functions.prepare_drink(self))
+        button2.pack(side="top", fill="x", pady=20)
 
-        print("Preparing your drink!")
-        time.sleep(3)
-        print("Preparing your drink!")
+        
