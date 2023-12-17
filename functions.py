@@ -84,9 +84,11 @@ def prepare_drink(self):
         time.sleep(2)
 
         # Send 'hello world' over the serial port
-        ser.write(b'Preparing your drink!\n')
         print("Preparing your drink!")
+        ser.write(b'P1-ON\n')
+        print("P1-ON\n")
         ser.flush()
         time.sleep(3)
-        print("Preparing your drink!")
+        ser.write(b'P1-OFF\n')
+        print("P1-OFF\n")
 

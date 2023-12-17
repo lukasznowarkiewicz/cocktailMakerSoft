@@ -8,6 +8,7 @@ from functools import partial
 import frame_start
 import frame_details
 import frame_preparing
+import frame_settings
 
 class App(customtkinter.CTk):
 
@@ -24,13 +25,15 @@ class App(customtkinter.CTk):
         with open('recipes.json', 'r') as recipes_json:
             recipes_data = json.load(recipes_json)
 
+        
+
         container = customtkinter.CTkFrame(self)
         container.pack(side="top", fill="both", expand=True)
         container.grid_rowconfigure(0, weight=1)
         container.grid_columnconfigure(0, weight=1)
 
         self.frames = {}
-        for F in (frame_start.StartPage, frame_details.Details, frame_preparing.Preparing):
+        for F in (frame_start.StartPage, frame_details.Details, frame_preparing.Preparing, frame_settings.Settings):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
