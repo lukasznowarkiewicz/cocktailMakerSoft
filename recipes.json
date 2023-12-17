@@ -2,51 +2,101 @@
     {
         "label": "Cosmopolitan",
         "image": "Cosmopolitan.png",
-        "description": "The Cosmopolitan, often referred to as the 'Cosmo,' is a sophisticated cocktail that gained popularity in the 1990s. Made with vodka, triple sec, cranberry juice, and freshly squeezed lime juice, it boasts a vibrant pink color and a perfect balance of sweet and tart flavors. Served in a martini glass and garnished with a twist of orange peel, the Cosmopolitan is a stylish and refreshing choice for those who appreciate a well-crafted cocktail."
+        "description": "The Cosmopolitan, often referred to as the 'Cosmo,' is a sophisticated cocktail...",
+        "steps": [
+            ["P1-ON", 20, "P1-OFF"],
+            ["P2-ON", 15, "P2-OFF"],
+            ["P3-ON", 10, "P3-OFF"]
+        ]
     },
     {
         "label": "Mojito",
         "image": "Mojito.png",
-        "description": "The Mojito is a classic Cuban cocktail that has become a favorite worldwide. This refreshing drink combines white rum, sugar, lime juice, soda water, and fresh mint leaves. The result is a light and invigorating beverage with a perfect blend of sweetness, citrusy tang, and herbal notes. Ideal for warm weather, the Mojito is often served over ice in a highball glass, making it a popular choice for those seeking a cool and flavorful drink."
+        "description": "The Mojito is a classic Cuban cocktail that has become a favorite worldwide...",
+        "steps": [
+            ["P1-ON", 15, "P1-OFF"],
+            ["P4-ON", 10, "P4-OFF"],
+            ["P5-ON", 5, "P5-OFF"]
+        ]
     },
     {
         "label": "Sex on the Beach",
         "image": "SexOnTheBeach.png",
-        "description": "Sex on the Beach is a fruity and tropical cocktail that captures the essence of a beachside paradise. This colorful drink typically combines vodka, peach schnapps, cranberry juice, and orange juice. With its vibrant hues and sweet, fruity taste, Sex on the Beach is a fun and playful choice for those who enjoy cocktails with a tropical twist. Garnished with a slice of orange, this cocktail is perfect for adding a touch of summer to any occasion."
+        "description": "Sex on the Beach is a fruity and tropical cocktail that captures the essence of a beachside paradise...",
+        "steps": [
+            ["P2-ON", 20, "P2-OFF"],
+            ["P3-ON", 15, "P3-OFF"],
+            ["P6-ON", 10, "P6-OFF"]
+        ]
     },
     {
         "label": "Margarita",
         "image": "Margarita.png",
-        "description": "The Margarita is a classic tequila-based cocktail known for its perfect balance of tartness, sweetness, and a touch of salt. Made with tequila, triple sec, and freshly squeezed lime juice, this iconic drink is typically served in a salt-rimmed glass over ice. Whether enjoyed on the rocks or blended into a slushy consistency, the Margarita is a versatile and refreshing cocktail that remains a favorite at bars and parties around the world."
+        "description": "The Margarita is a classic tequila-based cocktail known for its perfect balance of tartness, sweetness, and a touch of salt...",
+        "steps": [
+            ["P4-ON", 18, "P4-OFF"],
+            ["P5-ON", 12, "P5-OFF"],
+            ["P6-ON", 8, "P6-OFF"]
+        ]
     },
     {
         "label": "Piña Colada",
         "image": "PinaColada.png",
-        "description": "Escape to the tropics with the Piña Colada, a delicious and creamy cocktail that blends the flavors of coconut, pineapple, and rum. Made with white rum, coconut cream, and pineapple juice, this cocktail is often blended with ice to create a smooth and indulgent drink. Garnished with a slice of pineapple and a maraschino cherry, the Piña Colada is the perfect choice for those looking to sip on a taste of the Caribbean and enjoy a touch of paradise in a glass."
+        "description": "Escape to the tropics with the Piña Colada, a delicious and creamy cocktail that blends the flavors of coconut, pineapple, and rum...",
+        "steps": [
+            ["P1-ON", 25, "P1-OFF"],
+            ["P3-ON", 12, "P3-OFF"],
+            ["P5-ON", 8, "P5-OFF"]
+        ]
     },
     {
         "label": "Long Island Iced Tea",
         "image": "LongIslandIcedTea.png",
-        "description": "Despite its name, the Long Island Iced Tea contains no actual tea. Instead, this potent and boozy cocktail is a mix of vodka, tequila, rum, gin, triple sec, sour mix, and a splash of cola. Known for its deceptive sweetness and powerful kick, the Long Island Iced Tea is typically served in a tall glass over ice. With a medley of spirits and a hint of cola, this cocktail is perfect for those who enjoy a strong and flavorful libation."
+        "description": "Despite its name, the Long Island Iced Tea contains no actual tea. Instead, this potent and boozy cocktail is a mix of vodka, tequila, rum, gin, triple sec, sour mix, and a splash of cola...",
+        "steps": [
+            ["P2-ON", 30, "P2-OFF"],
+            ["P4-ON", 15, "P4-OFF"],
+            ["P6-ON", 10, "P6-OFF"]
+        ]
     },
     {
         "label": "Martini",
         "image": "Martini.png",
-        "description": "The Martini is a timeless and elegant cocktail that has become synonymous with sophistication. Typically made with gin or vodka and dry vermouth, the Martini is stirred or shaken and then strained into a chilled martini glass. Garnished with an olive or a twist of lemon, this classic drink is known for its clean and crisp taste. Whether enjoyed dry, dirty, or with a fruity twist, the Martini remains a symbol of refined taste and a staple at cocktail parties."
+        "description": "The Martini is a timeless and elegant cocktail that has become synonymous with sophistication...",
+        "steps": [
+            ["P1-ON", 18, "P1-OFF"],
+            ["P3-ON", 12, "P3-OFF"],
+            ["P5-ON", 8, "P5-OFF"]
+        ]
     },
     {
         "label": "Caipirinha",
         "image": "Caipirinha.png",
-        "description": "Hailing from Brazil, the Caipirinha is a refreshing and zesty cocktail featuring the country's signature spirit, cachaça. Made by muddling fresh limes with sugar and then adding cachaça and ice, this simple yet flavorful drink captures the essence of Brazilian culture. Served in a short glass, the Caipirinha is a delightful balance of sweetness and citrusy tartness, making it a popular choice for those seeking a taste of Brazil in a glass."
+        "description": "Hailing from Brazil, the Caipirinha is a refreshing and zesty cocktail featuring the country's signature spirit, cachaça...",
+        "steps": [
+            ["P2-ON", 20, "P2-OFF"],
+            ["P4-ON", 15, "P4-OFF"],
+            ["P6-ON", 10, "P6-OFF"]
+        ]
     },
     {
         "label": "Whiskey Sour",
         "image": "WhiskeySour.png",
-        "description": "The Whiskey Sour is a classic cocktail that highlights the rich and robust flavors of whiskey, balanced with the sweetness of simple syrup and the tartness of fresh lemon juice. Shaken with ice and strained into a sour glass, this timeless drink is often garnished with a cherry or an orange slice. The Whiskey Sour appeals to those who appreciate the bold character of whiskey while enjoying a well-rounded and refreshing beverage with a perfect harmony of sweet and sour elements."
+        "description": "The Whiskey Sour is a classic cocktail that highlights the rich and robust flavors of whiskey, balanced with the sweetness of simple syrup and the tartness of fresh lemon juice...",
+        "steps": [
+            ["P1-ON", 15, "P1-OFF"],
+            ["P3-ON", 10, "P3-OFF"],
+            ["P5-ON", 5, "P5-OFF"]
+        ]
     },
     {
         "label": "Bloody Mary",
         "image": "BloodyMary.png",
-        "description": "The Bloody Mary is a savory and flavorful cocktail that has become a brunch-time favorite. Made with vodka, tomato juice, and a combination of spices and flavorings, including Worcestershire sauce, hot sauce, and various seasonings, the Bloody Mary is known for its bold and complex taste. Often garnished with celery, a lemon wedge, and even bacon, this iconic cocktail is celebrated for its versatility and ability to cater to individual tastes, making it a go-to choice for those seeking a savory and satisfying drink."
+        "description": "The Bloody Mary is a savory and flavorful cocktail that has become a brunch-time favorite...",
+        "steps": [
+            ["P2-ON", 18, "P2-OFF"],
+            ["P4-ON", 12, "P4-OFF"],
+            ["P6-ON", 8, "P6-OFF"]
+        ]
     }
 ]
