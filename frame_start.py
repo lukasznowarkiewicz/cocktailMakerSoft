@@ -33,7 +33,7 @@ class StartPage(customtkinter.CTkFrame):
             # self.image = customtkinter.CTkImage(Image.open(os.path.join(image_path, button_data["image"])), size=(120, 120))
             label = button_data["label"]
             #image = button_data["image"]
-            btn = customtkinter.CTkButton(self, text=label, compound="top", font=("arial", 18), border_spacing=10, command=lambda: controller.show_frame("Details"))
+            btn = customtkinter.CTkButton(self, text=label, compound="top", font=("arial", 18), border_spacing=10, command=lambda: controller.show_frame("Details", label))
             btn.grid(row=idx // 5, column=idx % 5, padx=5, pady=5)
             btn.configure(height = 260, width = 192)
 

@@ -37,23 +37,6 @@ class Drinks:
                 return cocktail
         return None
 
-# Example usage:
-config_file_path = 'recipes.json'
-drinks_machine = Drinks(config_file_path)
-
-# Get the names of available cocktails
-cocktail_names = drinks_machine.get_cocktail_names()
-print("Available cocktails:", cocktail_names)
-
-# Get details for a specific cocktail (e.g., Cosmopolitan)
-cosmo_details = drinks_machine.get_cocktail_by_name('Cosmopolitan')
-if cosmo_details:
-    print("\nDetails for Cosmopolitan:")
-    print("Description:", cosmo_details['description'])
-    print("Steps:", cosmo_details['steps'])
-else:
-    print("\nCosmopolitan not found in the configuration.")
-
 
 class App(customtkinter.CTk):
 
@@ -66,9 +49,21 @@ class App(customtkinter.CTk):
         customtkinter.set_appearance_mode("Dark")
         print(functions.print_debug_info(self))
         
-        # json data import of the recipes
-        with open('recipes.json', 'r') as recipes_json:
-            recipes_data = json.load(recipes_json)
+        # Importing drinks and recipes
+        drinks = Drinks('recipes.json')
+
+        # Get the names of available cocktails
+        cocktail_names = drinks.get_cocktail_names()
+        print("Available cocktails:", cocktail_names)
+
+        # Get details for a specific cocktail (e.g., Cosmopolitan)
+        cosmo_details = drinks.get_cocktail_by_name('Cosmopolitan')
+        if cosmo_details:
+            print("\nDetails for Cosmopolitan:")
+            print("Description:", cosmo_details['description'])
+            print("Steps:", cosmo_details['steps'])
+        else:
+            print("\nCosmopolitan not found in the configuration.")
 
         
 
@@ -95,10 +90,13 @@ class App(customtkinter.CTk):
         is_fullscreen = self.attributes('-fullscreen')
         self.attributes('-fullscreen', not is_fullscreen)
     
-    def show_frame(self, page_name):
+    def show_frame(self, page_name, argument='none'):
         '''Show a frame for the given page name'''
         frame = self.frames[page_name]
+        if (page_name=="Details"):
+            self.frames[page_name].updateValues(argument)
         frame.tkraise()
+        
         
 
         
