@@ -11,6 +11,8 @@ import frame_preparing
 import frame_settings
 import json
 
+
+
 class Drinks:
     def __init__(self, config_file):
         self.config_file = config_file
@@ -36,6 +38,9 @@ class Drinks:
             if cocktail['label'] == cocktail_name:
                 return cocktail
         return None
+# global_variable.py
+drinks = Drinks('recipes.json')
+
 
 
 class App(customtkinter.CTk):
@@ -50,14 +55,14 @@ class App(customtkinter.CTk):
         print(functions.print_debug_info(self))
         
         # Importing drinks and recipes
-        drinks = Drinks('recipes.json')
+        self.drinks = Drinks('recipes.json')
 
         # Get the names of available cocktails
-        cocktail_names = drinks.get_cocktail_names()
+        cocktail_names = self.drinks.get_cocktail_names()
         print("Available cocktails:", cocktail_names)
 
         # Get details for a specific cocktail (e.g., Cosmopolitan)
-        cosmo_details = drinks.get_cocktail_by_name('Cosmopolitan')
+        cosmo_details = self.drinks.get_cocktail_by_name('Cosmopolitan')
         if cosmo_details:
             print("\nDetails for Cosmopolitan:")
             print("Description:", cosmo_details['description'])
@@ -90,7 +95,7 @@ class App(customtkinter.CTk):
         is_fullscreen = self.attributes('-fullscreen')
         self.attributes('-fullscreen', not is_fullscreen)
     
-    def show_frame(self, page_name, argument='none'):
+    def show_frame(self, page_name, argument="none"):
         '''Show a frame for the given page name'''
         frame = self.frames[page_name]
         if (page_name=="Details"):

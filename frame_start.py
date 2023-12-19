@@ -30,7 +30,6 @@ class StartPage(customtkinter.CTkFrame):
             label.append(button_data["label"])
             print(f"Label {label[idx]}")
             #image = button_data["image"]
-            # btn = customtkinter.CTkButton(self, text=label, compound="top", font=("arial", 18), border_spacing=10, command=lambda: controller.show_frame("Details", btn._text))
             button_array.append(customtkinter.CTkButton(self, text=label[idx], compound="top", font=("arial", 18), border_spacing=10, command=lambda l=label[idx]:  controller.show_frame("Details", l)))
             button_array[idx].grid(row=idx // 5, column=idx % 5, padx=5, pady=5)
             button_array[idx].configure(height = 260, width = 192)
