@@ -103,7 +103,14 @@ def prepare_drink(self, drinkName):
             print("Steps:", cosmo_details['steps'])
         else:
             print("\nCosmopolitan not found in the configuration. ", drinkName)
-        # for step in currentDrink['steps']:
-        #     ser.write((step[0]))
+        for step in cosmo_details['steps']:
+            # ser.write(bytes(step[0] + '\n'))
+            command = step[0] + '\n'
+            ser.write(command.encode('utf-8'))
+            print(command)
+            time.sleep(step[1])
+            command = step[2] + '\n'
+            ser.write(command.encode('utf-8'))
+            print(command)
 
 
