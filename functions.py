@@ -68,7 +68,7 @@ def print_debug_info(self):
         except subprocess.CalledProcessError as e:
             print(f"Error retrieving installed package versions: {e}")     
 
-def prepare_drink(self):
+def prepare_drink(self, drinkName):
      # Find the port of the Raspberry Pi Pico
     pico_port = find_pico_port()
 

@@ -100,6 +100,8 @@ class App(customtkinter.CTk):
         frame = self.frames[page_name]
         if (page_name=="Details"):
             self.frames[page_name].updateValues(argument)
+        if (page_name=="Preparing"):
+            self.frames[page_name].currentDrink = argument
         frame.tkraise()
         
         
