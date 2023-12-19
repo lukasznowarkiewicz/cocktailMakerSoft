@@ -6,6 +6,8 @@ import functions
 import tkinter
 from functools import partial
 import time
+# from main import drinks
+
 
 class Preparing(customtkinter.CTkFrame):
 

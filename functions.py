@@ -4,6 +4,7 @@ import sys
 import time
 import serial.tools.list_ports
 import serial
+# from main import drinks
 
 class SerialPort:
     def __init__(self, port, baudrate=115200, timeout=1):
@@ -69,6 +70,7 @@ def print_debug_info(self):
             print(f"Error retrieving installed package versions: {e}")     
 
 def prepare_drink(self, drinkName):
+    from main import drinks
      # Find the port of the Raspberry Pi Pico
     pico_port = find_pico_port()
 
@@ -81,14 +83,27 @@ def prepare_drink(self, drinkName):
     # Open the serial connection
     with serial.Serial(pico_port, 115200, timeout=1) as ser:
         # Wait for the connection to stabilize
-        time.sleep(2)
+        # time.sleep(1)
 
         # Send 'hello world' over the serial port
         print("Preparing your drink!")
         ser.write(b'P1-ON\n')
         print("P1-ON\n")
         ser.flush()
-        time.sleep(3)
+        # time.sleep(3)
         ser.write(b'P1-OFF\n')
         print("P1-OFF\n")
+        # cosmo_details = self.get_cocktail_by_name(drinkName)
+        cosmo_details = drinks.get_cocktail_by_name(drinkName)
+        # frame_details.drinks.get_cocktail_by_name(drinkName)
+        # print({currentDrink['steps']})
+        if cosmo_details:
+            print("\nDetails for Cosmopolitan:")
+            print("Description:", cosmo_details['description'])
+            print("Steps:", cosmo_details['steps'])
+        else:
+            print("\nCosmopolitan not found in the configuration. ", drinkName)
+        # for step in currentDrink['steps']:
+        #     ser.write((step[0]))
+
 
