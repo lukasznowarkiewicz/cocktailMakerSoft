@@ -10,13 +10,23 @@ class Details(customtkinter.CTkFrame):
 
     def __init__(self, parent, controller):
         customtkinter.CTkFrame.__init__(self, parent)
-        self.grid_rowconfigure(2, weight=1)  # configure grid system
-        self.grid_columnconfigure(2, weight=1)
         self.controller = controller
-        self.label = customtkinter.CTkLabel(self, text="This is page Details")
-        self.label.pack(side="top", fill="x", pady=10)
+        # top frame with description and photo
+        topFrame = customtkinter.CTkFrame(master=self, width=1200, height=600, fg_color="transparent", border_color="white")
+        topFrame.pack(pady=50,padx=50, side="top")
+        self.label = customtkinter.CTkLabel(topFrame, text="This is page Details")
+        self.label.pack(side="left", fill="x", pady=10)
 
 
+        my_image = customtkinter.CTkImage(light_image=Image.open("cocktail.png"),
+                                  dark_image=Image.open("cocktail.png"),
+                                  size=(300, 300))
+
+        image_label = customtkinter.CTkLabel(topFrame, image=my_image, text="")  # display image with a CTkLabel
+        image_label.pack(side="right", fill="x", pady=10)
+    
+
+        # bottom frame with buttons
         bottomFrame = customtkinter.CTkFrame(master=self, width=1200, height=200, fg_color="transparent", border_color="white")
         bottomFrame.pack(pady=50,padx=50, side="bottom")
         # self.label.con
@@ -27,7 +37,11 @@ class Details(customtkinter.CTkFrame):
         self.button2 = customtkinter.CTkButton(bottomFrame, text="Make it!",  width=400, height=60, 
                            command=lambda: controller.show_frame("Preparing"))
         self.button2.pack(side="right", pady=10)
-        # self.updateValues(self, "cokolwiek")
+        
+        self.labelSpacer = customtkinter.CTkLabel(bottomFrame, text="            ")
+        self.labelSpacer.pack(side="bottom", fill="x", pady=10)
+
+
     def updateValues(self, drinkName):
         updated_text = f"This is page Details for {drinkName}"
         self.label.configure(text=updated_text)
