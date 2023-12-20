@@ -1,78 +1,108 @@
 [
     {
         "label": "Cosmopolitan",
-        "image": "Cosmopolitan.png",
-        "description": "The Cosmopolitan, often referred to as the 'Cosmo,' is a sophisticated cocktail...",
+        "image": "cosmopolitan.PNG",
+        "description": "Indulge in the exquisite taste of the Cosmopolitan, a sophisticated blend of vodka, triple sec, cranberry juice, and a splash of lime. This iconic cocktail is known for its vibrant pink hue and refreshing citrus notes that dance on your palate.",
         "steps": [
-            ["P1-ON", 20, "P1-OFF"],
-            ["P2-ON", 15, "P2-OFF"],
-            ["P3-ON", 10, "P3-OFF"]
+            ["P1-ON", 22, "P1-OFF"],
+            ["P2-ON", 18, "P2-OFF"],
+            ["P3-ON", 12, "P3-OFF"]
         ]
     },
     {
-        "label": "Mojito",
-        "image": "Mojito.png",
-        "description": "The Mojito is a classic Cuban cocktail that has become a favorite worldwide...",
+        "label": "Whisky Sour",
+        "image": "whiskysour.PNG",
+        "description": "Experience the timeless allure of the Whisky Sour, a classic cocktail that perfectly balances the bold flavors of whiskey with the sweetness of simple syrup and the zing of fresh lemon juice. Served over ice, it's a harmonious symphony of taste sensations.",
         "steps": [
-            ["P1-ON", 15, "P1-OFF"],
-            ["P4-ON", 10, "P4-OFF"],
-            ["P5-ON", 5, "P5-OFF"]
+            ["P1-ON", 16, "P1-OFF"],
+            ["P3-ON", 11, "P3-OFF"],
+            ["P5-ON", 6, "P5-OFF"]
+        ]
+    },
+    {
+        "label": "A’la French",
+        "image": "alafrench.PNG",
+        "description": "Transport yourself to the streets of Paris with the A’la French cocktail. This delightful concoction combines French brandy, elderflower liqueur, and a hint of citrus. Sip and savor the elegance of this drink inspired by the City of Lights.",
+        "steps": [
+            ["P2-ON", 19, "P2-OFF"],
+            ["P4-ON", 14, "P4-OFF"],
+            ["P6-ON", 9, "P6-OFF"]
+        ]
+    },
+    {
+        "label": "Cuba Libre pl",
+        "image": "cubalibre.PNG",
+        "description": "Embark on a journey to the vibrant streets of Havana with the Cuba Libre pl. This Cuban-inspired cocktail features a perfect blend of dark rum, cola, and a splash of fresh lime juice. Immerse yourself in the tropical vibes with every sip.",
+        "steps": [
+            ["P1-ON", 23, "P1-OFF"],
+            ["P3-ON", 13, "P3-OFF"],
+            ["P5-ON", 7, "P5-OFF"]
+        ]
+    },
+    {
+        "label": "Whisky z Colą",
+        "image": "whisky&cola.PNG",
+        "description": "Bold and invigorating, the Whisky z Colą combines the robust notes of whisky with the effervescence of cola. This classic duo is elevated with a modern twist, creating a drink that's both timeless and contemporary.",
+        "steps": [
+            ["P2-ON", 21, "P2-OFF"],
+            ["P4-ON", 16, "P4-OFF"],
+            ["P6-ON", 11, "P6-OFF"]
         ]
     },
     {
         "label": "Sex on the Beach",
-        "image": "SexOnTheBeach.png",
-        "description": "Sex on the Beach is a fruity and tropical cocktail that captures the essence of a beachside paradise...",
+        "image": "sexonthebeach.PNG",
+        "description": "Escape to a tropical paradise with the Sex on the Beach cocktail. A delightful medley of vodka, peach schnapps, cranberry juice, and orange juice, this fruity concoction captures the essence of sun, sand, and sea breeze.",
         "steps": [
-            ["P2-ON", 20, "P2-OFF"],
+            ["P1-ON", 20, "P1-OFF"],
             ["P3-ON", 15, "P3-OFF"],
             ["P6-ON", 10, "P6-OFF"]
         ]
     },
     {
-        "label": "Margarita",
-        "image": "Margarita.png",
-        "description": "The Margarita is a classic tequila-based cocktail known for its perfect balance of tartness, sweetness, and a touch of salt...",
+        "label": "Gimlet",
+        "image": "gimlet.PNG",
+        "description": "Savor the crisp and refreshing taste of the Gimlet. This classic cocktail features the perfect balance of gin and lime juice, creating a zesty and invigorating drink that's a true testament to timeless mixology.",
         "steps": [
-            ["P4-ON", 18, "P4-OFF"],
-            ["P5-ON", 12, "P5-OFF"],
-            ["P6-ON", 8, "P6-OFF"]
-        ]
-    },
-    {
-        "label": "Piña Colada",
-        "image": "PinaColada.png",
-        "description": "Escape to the tropics with the Piña Colada, a delicious and creamy cocktail that blends the flavors of coconut, pineapple, and rum...",
-        "steps": [
-            ["P1-ON", 25, "P1-OFF"],
-            ["P3-ON", 12, "P3-OFF"],
+            ["P2-ON", 17, "P2-OFF"],
+            ["P4-ON", 12, "P4-OFF"],
             ["P5-ON", 8, "P5-OFF"]
         ]
     },
     {
-        "label": "Long Island Iced Tea",
-        "image": "LongIslandIcedTea.png",
-        "description": "Despite its name, the Long Island Iced Tea contains no actual tea. Instead, this potent and boozy cocktail is a mix of vodka, tequila, rum, gin, triple sec, sour mix, and a splash of cola...",
+        "label": "A’la Mimoza",
+        "image": "mimoza.PNG",
+        "description": "Celebrate elegance with the A’la Mimoza cocktail. This effervescent blend of champagne and fresh orange juice is a tribute to the classic Mimosa, delivering a burst of citrusy delight with every sip.",
         "steps": [
-            ["P2-ON", 30, "P2-OFF"],
-            ["P4-ON", 15, "P4-OFF"],
-            ["P6-ON", 10, "P6-OFF"]
+            ["P1-ON", 19, "P1-OFF"],
+            ["P3-ON", 13, "P3-OFF"],
+            ["P5-ON", 9, "P5-OFF"]
         ]
     },
     {
-        "label": "Martini",
-        "image": "Martini.png",
-        "description": "The Martini is a timeless and elegant cocktail that has become synonymous with sophistication...",
+        "label": "Wódka z Colą",
+        "image": "wodka&cola.PNG",
+        "description": "Embrace the bold flavors of Wódka z Colą, a fusion of vodka and cola that awakens your taste buds. This no-nonsense cocktail is a go-to choice for those who appreciate the classic combination of spirits and soda.",
+        "steps": [
+            ["P2-ON", 22, "P2-OFF"],
+            ["P4-ON", 17, "P4-OFF"],
+            ["P6-ON", 12, "P6-OFF"]
+        ]
+    },
+    {
+        "label": "Gin z Colą",
+        "image": "gin&cola.PNG",
+        "description": "Elevate your evening with the Gin z Colą, a delightful blend of gin and cola that marries the botanical richness of gin with the effervescence of cola. It's a simple yet sophisticated choice for any occasion.",
         "steps": [
             ["P1-ON", 18, "P1-OFF"],
-            ["P3-ON", 12, "P3-OFF"],
-            ["P5-ON", 8, "P5-OFF"]
+            ["P3-ON", 14, "P3-OFF"],
+            ["P5-ON", 10, "P5-OFF"]
         ]
     },
     {
-        "label": "Caipirinha",
-        "image": "Caipirinha.png",
-        "description": "Hailing from Brazil, the Caipirinha is a refreshing and zesty cocktail featuring the country's signature spirit, cachaça...",
+        "label": "Puke",
+        "image": "puke.PNG",
+        "description": "Dare to be bold with the Puke cocktail. This unconventional mix of spirits packs a punch, combining unexpected flavors for a daring drinking experience. Not for the faint of heart, Puke is a fearless exploration of taste.",
         "steps": [
             ["P2-ON", 20, "P2-OFF"],
             ["P4-ON", 15, "P4-OFF"],
@@ -80,23 +110,53 @@
         ]
     },
     {
-        "label": "Whiskey Sour",
-        "image": "WhiskeySour.png",
-        "description": "The Whiskey Sour is a classic cocktail that highlights the rich and robust flavors of whiskey, balanced with the sweetness of simple syrup and the tartness of fresh lemon juice...",
+        "label": "Strong Whisky Sour",
+        "image": "strongwhiskysour.PNG",
+        "description": "For those seeking an extra kick, indulge in the Strong Whisky Sour. This robust variation of the classic cocktail boasts a higher concentration of whiskey, creating a bold and intense flavor profile that demands attention.",
         "steps": [
-            ["P1-ON", 15, "P1-OFF"],
-            ["P3-ON", 10, "P3-OFF"],
-            ["P5-ON", 5, "P5-OFF"]
+            ["P1-ON", 17, "P1-OFF"],
+            ["P3-ON", 12, "P3-OFF"],
+            ["P5-ON", 7, "P5-OFF"]
         ]
     },
     {
-        "label": "Bloody Mary",
-        "image": "BloodyMary.png",
-        "description": "The Bloody Mary is a savory and flavorful cocktail that has become a brunch-time favorite...",
+        "label": "Crunbergin",
+        "image": "crunbergin.PNG",
+        "description": "Immerse yourself in the unique taste of Crunbergin, a distinctive blend of gin and cranberry. This unconventional cocktail offers a harmonious balance of botanicals and tartness, making it a memorable choice for adventurous palates.",
+        "steps": [
+            ["P2-ON", 21, "P2-OFF"],
+            ["P4-ON", 16, "P4-OFF"],
+            ["P6-ON", 11, "P6-OFF"]
+        ]
+    },
+    {
+        "label": "Gin & Tonic",
+        "image": "gin&tonic.PNG",
+        "description": "Elevate your spirits with the timeless Gin & Tonic. This classic highball cocktail features the crispness of gin and the effervescence of tonic water, garnished with a twist of lime. It's a refreshing and iconic choice for any occasion.",
+        "steps": [
+            ["P1-ON", 20, "P1-OFF"],
+            ["P3-ON", 15, "P3-OFF"],
+            ["P5-ON", 10, "P5-OFF"]
+        ]
+    },
+    {
+        "label": "Whisky & Tonic",
+        "image": "whisky&tonic.PNG",
+        "description": "Experience the bold fusion of Whisky & Tonic, a contemporary take on the classic highball. This drink combines the rich, smoky notes of whisky with the crisp and bubbly essence of tonic water, creating a sophisticated libation.",
         "steps": [
             ["P2-ON", 18, "P2-OFF"],
-            ["P4-ON", 12, "P4-OFF"],
-            ["P6-ON", 8, "P6-OFF"]
+            ["P4-ON", 14, "P4-OFF"],
+            ["P6-ON", 9, "P6-OFF"]
+        ]
+    },
+    {
+        "label": "Room 187 (Host's Special)",
+        "image": "room187.PNG",
+        "description": "Step into the exclusive realm of Room 187 with the Host's Special cocktail. Crafted with secret ingredients and unparalleled finesse, this bespoke drink is a testament to the host's mastery in mixology. Indulge in a taste experience like no other.",
+        "steps": [
+            ["P1-ON", 22, "P1-OFF"],
+            ["P3-ON", 17, "P3-OFF"],
+            ["P5-ON", 12, "P5-OFF"]
         ]
     }
 ]
