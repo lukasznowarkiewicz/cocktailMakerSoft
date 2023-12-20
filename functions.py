@@ -4,6 +4,8 @@ import sys
 import time
 import serial.tools.list_ports
 import serial
+import os
+import shutil
 # from main import drinks
 
 class SerialPort:
@@ -113,4 +115,16 @@ def prepare_drink(self, drinkName):
             ser.write(command.encode('utf-8'))
             print(command)
 
-
+            
+def clean_cache():  
+    # Remove the contents of the __pycache__ directories
+    for root, dirs, files in os.walk(os.path.abspath(".")):
+        for dir_name in dirs:
+            if dir_name == "__pycache__":
+                cache_path = os.path.join(root, dir_name)
+                print(f"Cleaning cache folder: {cache_path}")
+                try:
+                    # Remove the contents of the __pycache__ folder
+                    shutil.rmtree(cache_path)
+                except OSError as e:
+                    print(f"Error cleaning cache folder: {e}")

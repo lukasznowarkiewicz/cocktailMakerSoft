@@ -116,6 +116,7 @@ class App(customtkinter.CTk):
 
 
 if __name__ == "__main__":
+    # functions.clean_cache()
     app = App()
     app.mainloop()
 
