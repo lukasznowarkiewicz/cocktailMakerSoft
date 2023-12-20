@@ -1,76 +1,59 @@
-//#include "Arduino.h"
-#define P1 2
-#define P2 3
-#define P3 4
-#define P4 5
-#define P5 6
-#define P6 7
-#define P7 8
-#define P8 9
-int outPins[] = {P1, P2, P3, P4, P5, P6, P7, P8};
+#define LED_PIN 13 // Assuming the onboard LED is connected to pin 13
+#define NUM_RELAYS 8
+#define COMMAND_LENGTH 5
 
-void flashLEDOnce(){
-      digitalWrite(LED_BUILTIN, LOW);
-      delay(50);
-      digitalWrite(LED_BUILTIN, HIGH);
-  
-}
+int outPins[NUM_RELAYS] = {2, 3, 4, 5, 6, 7, 8, 9};
 
-void flashLEDTwice(){
-      digitalWrite(LED_BUILTIN, LOW);
-      delay(50);
-      digitalWrite(LED_BUILTIN, HIGH);
-      delay(50);
-      digitalWrite(LED_BUILTIN, LOW);
-      delay(50);
-      digitalWrite(LED_BUILTIN, HIGH);
-      delay(50);
+void flashLED(int count, int delayTime) {
+  for (int i = 0; i < count; i++) {
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(delayTime);
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(delayTime);
+  }
 }
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("I m alive");
-  if (!Serial.available()) {}
-  for (int i = 0; i < 8; i++) {
-    pinMode(outPins[i], OUTPUT);
-    delay(100);
-    digitalWrite(outPins[i], HIGH);
-  }
   pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, HIGH);
-  Serial.println("I'm alive 2");
+  flashLED(2, 50); // Flash onboard LED twice to indicate startup
+  for (int i = 0; i < NUM_RELAYS; i++) {
+    pinMode(outPins[i], OUTPUT);
+    digitalWrite(outPins[i], HIGH);
+    delay(100);
+  }
 }
 
-
 void loop() {
-  if (Serial.available()) {
+  if (Serial.available() >= COMMAND_LENGTH) {
     String command = Serial.readStringUntil('\n');
-    digitalWrite(LED_BUILTIN, LOW);
-    delay(100);
     handleCommand(command);
-    digitalWrite(LED_BUILTIN, HIGH);
   }
 }
 
 void handleCommand(String command) {
+  flashLED(1, 50);
   command.trim();
   String module = command.substring(0, 2);
   String action = command.substring(3);
 
-  int pin;
-
-  if (module == "P1") {
-    pin = P1;
-    if (action == "ON") {
-      digitalWrite(pin, LOW);
-      Serial.println("P1: ON - OK");
-      flashLEDTwice();
-    } else if (action == "OFF") {
-      digitalWrite(pin, HIGH);
-      Serial.println("P1: OFF - OK");
-      flashLEDTwice();
-    } else {
-      Serial.println("Unknown action: " + action);
+  for (int i = 0; i < NUM_RELAYS; i++) {
+    if (module == "P" + String(i + 1)) {
+      int pin = outPins[i];
+      if (action == "ON") {
+        digitalWrite(pin, LOW);
+        Serial.println(module + ": ON - OK");
+        flashLED(2, 50);
+      } else if (action == "OFF") {
+        digitalWrite(pin, HIGH);
+        Serial.println(module + ": OFF - OK");
+        flashLED(2, 50);
+      } else {
+        Serial.println("Unknown action: " + action);
+      }
+      return; // Exit loop after processing the command
     }
   }
+
+  Serial.println("Unknown module: " + module);
 }
