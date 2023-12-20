@@ -1,7 +1,7 @@
 [
     {
         "label": "Cosmopolitan",
-        "image": "cosmopolitan.PNG",
+        "image": "cosmopolitan.png",
         "description": "Indulge in the exquisite taste of the Cosmopolitan, a sophisticated blend of vodka, triple sec, cranberry juice, and a splash of lime. This iconic cocktail is known for its vibrant pink hue and refreshing citrus notes that dance on your palate.",
         "steps": [
             ["P1-ON", 22, "P1-OFF"],
