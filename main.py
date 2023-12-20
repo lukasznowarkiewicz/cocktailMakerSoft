@@ -95,6 +95,10 @@ class App(customtkinter.CTk):
     def toggle_fullscreen(self, event=None):
         is_fullscreen = self.attributes('-fullscreen')
         self.attributes('-fullscreen', not is_fullscreen)
+        if not is_fullscreen:
+            self.config(cursor='none')
+        else:
+            self.configure(cursor='')
     
     def show_frame(self, page_name, argument="none"):
         '''Show a frame for the given page name'''
