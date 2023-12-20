@@ -10,16 +10,6 @@
         ]
     },
     {
-        "label": "Whisky Sour",
-        "image": "whiskysour.PNG",
-        "description": "Experience the timeless allure of the Whisky Sour, a classic cocktail that perfectly balances the bold flavors of whiskey with the sweetness of simple syrup and the zing of fresh lemon juice. Served over ice, it's a harmonious symphony of taste sensations.",
-        "steps": [
-            ["P1-ON", 16, "P1-OFF"],
-            ["P3-ON", 11, "P3-OFF"],
-            ["P5-ON", 6, "P5-OFF"]
-        ]
-    },
-    {
         "label": "A’la French",
         "image": "alafrench.PNG",
         "description": "Transport yourself to the streets of Paris with the A’la French cocktail. This delightful concoction combines French brandy, elderflower liqueur, and a hint of citrus. Sip and savor the elegance of this drink inspired by the City of Lights.",
@@ -150,7 +140,7 @@
         ]
     },
     {
-        "label": "Room 187 (Host's Special)",
+        "label": "Room 187",
         "image": "room187.PNG",
         "description": "Step into the exclusive realm of Room 187 with the Host's Special cocktail. Crafted with secret ingredients and unparalleled finesse, this bespoke drink is a testament to the host's mastery in mixology. Indulge in a taste experience like no other.",
         "steps": [
