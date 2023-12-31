@@ -29,11 +29,11 @@ class Preparing(customtkinter.CTkFrame):
         bottomFrame = customtkinter.CTkFrame(master=self, width=1200, height=200, fg_color="transparent", border_color="white")
         bottomFrame.pack(pady=50,padx=50, side="bottom")
         # self.label.con
-        self.button = customtkinter.CTkButton(bottomFrame, text="Return to start screen", width=400, height=60, 
+        self.button = customtkinter.CTkButton(bottomFrame, font=("lato", 22), text="Return to start screen", width=400, height=60, 
                            command=lambda: controller.show_frame("StartPage"))
         # self.button.grid(sticky="nsew", row=1, column=4)
         self.button.pack(side="left", pady=10)
-        self.button2 = customtkinter.CTkButton(bottomFrame, text="Start",  width=400, height=60, 
+        self.button2 = customtkinter.CTkButton(bottomFrame, font=("lato", 22), text="Start",  width=400, height=60, 
                            command=lambda: functions.prepare_drink(self, self.currentDrink))
         self.button2.pack(side="right", pady=10)
         

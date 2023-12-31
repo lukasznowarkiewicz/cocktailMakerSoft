@@ -16,7 +16,7 @@ class Details(customtkinter.CTkFrame):
         # top frame with description and photo
         topFrame = customtkinter.CTkFrame(master=self, width=1024, height=600, fg_color="transparent", border_color="white")
         topFrame.pack(pady=50,padx=50, side="top")
-        self.label = customtkinter.CTkLabel(topFrame, font=("arial", 22), text="This is page Details. It should be updated while choosing drink. If you are seeing this text, something malfunction.", compound="top", wraplength=400)
+        self.label = customtkinter.CTkLabel(topFrame, font=("lato", 22), text="This is page Details. It should be updated while choosing drink. If you are seeing this text, something malfunction.", compound="top", wraplength=400)
         self.label.pack(side="left", fill="x", pady=50,padx=50)
 
         self.my_image = customtkinter.CTkImage(light_image=Image.open("drinks/alafrench.PNG"),
@@ -31,11 +31,11 @@ class Details(customtkinter.CTkFrame):
         bottomFrame = customtkinter.CTkFrame(master=self, width=1200, height=200, fg_color="transparent", border_color="white")
         bottomFrame.pack(pady=50,padx=50, side="bottom")
         # self.label.con
-        self.button = customtkinter.CTkButton(bottomFrame, text="Return to drink choice", width=400, height=60, 
+        self.button = customtkinter.CTkButton(bottomFrame, font=("lato", 22), text="Return to drink choice", width=400, height=60, 
                            command=lambda: controller.show_frame("StartPage"))
         # self.button.grid(sticky="nsew", row=1, column=4)
         self.button.pack(side="left", pady=10)
-        self.button2 = customtkinter.CTkButton(bottomFrame, text="Make it!",  width=400, height=60, 
+        self.button2 = customtkinter.CTkButton(bottomFrame, font=("lato", 22), text="Make it!",  width=400, height=60, 
                            command=lambda: controller.show_frame("Preparing", self.currentDrink))
         self.button2.pack(side="right", pady=10)
         
