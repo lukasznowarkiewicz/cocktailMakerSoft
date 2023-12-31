@@ -115,6 +115,38 @@ def prepare_drink(self, drinkName):
             ser.write(command.encode('utf-8'))
             print(command)
 
+def controlPump(self, pumpNumber, ONorOFF):
+    from main import drinks
+    pico_port = find_pico_port()
+    if pico_port is None:
+        print("Raspberry Pi Pico not found. Make sure it is connected.")
+        return
+    print(f"Raspberry Pi Pico found on port: {pico_port}")
+    # Open the serial connection
+    with serial.Serial(pico_port, 115200, timeout=1) as ser:
+        print("Preparing your drink!")
+        if (ONorOFF == 'ON'):
+            ser.write(b'P1-ON\n')
+            print("P1-ON\n")
+            ser.flush()
+        elif (ONorOFF == 'OFF'):
+            ser.write(b'P1-OFF\n')
+            print("P1-OFF\n")
+            ser.flush()
+        else:
+            return
+        
+        # cosmo_details = drinks.get_cocktail_by_name(drinkName)
+        # for step in cosmo_details['steps']:
+        #     # ser.write(bytes(step[0] + '\n'))
+        #     command = step[0] + '\n'
+        #     ser.write(command.encode('utf-8'))
+        #     print(command)
+        #     time.sleep(step[1])
+        #     command = step[2] + '\n'
+        #     ser.write(command.encode('utf-8'))
+        #     print(command)
+
             
 def clean_cache():  
     # Remove the contents of the __pycache__ directories
