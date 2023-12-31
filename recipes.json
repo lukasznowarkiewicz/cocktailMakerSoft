@@ -4,9 +4,9 @@
         "image": "cosmopolitan.png",
         "description": "Indulge in the exquisite taste of the Cosmopolitan, a sophisticated blend of vodka, triple sec, cranberry juice, and a splash of lime. This iconic cocktail is known for its vibrant pink hue and refreshing citrus notes that dance on your palate. Ingridients: vodka (50ml), cranberry juice (100ml), lime juice (50ml)",
         "steps": [
-            ["P1-ON", 50, "P1-OFF"],
-            ["P5-ON", 100, "P5-OFF"],
-            ["P7-ON", 25, "P7-OFF"]
+            ["P1-ON", 25, "P1-OFF"],
+            ["P5-ON", 50, "P5-OFF"],
+            ["P7-ON", 15, "P7-OFF"]
         ]
     },
     {
@@ -14,9 +14,9 @@
         "image": "alafrench.PNG",
         "description": "Transport yourself to the streets of Paris with the A’la French cocktail. This delightful concoction combines French brandy, elderflower liqueur, and a hint of citrus. Sip and savor the elegance of this drink inspired by the City of Lights. Ingredients: Whisky (50ml), Cranberry Juice (50ml), Tonic (100ml)",
         "steps": [
-            ["P3-ON", 50, "P3-OFF"],
-            ["P7-ON", 25, "P7-OFF"],
-            ["P8-ON", 100, "P8-OFF"]
+            ["P3-ON", 25, "P3-OFF"],
+            ["P7-ON", 15, "P7-OFF"],
+            ["P8-ON", 50, "P8-OFF"]
         ]
     },
     {
@@ -24,9 +24,9 @@
         "image": "cubalibre.PNG",
         "description": "Embark on a journey to the vibrant streets of Havana with the Cuba Libre pl. This Cuban-inspired cocktail features a perfect blend of dark rum, cola, and a splash of fresh lime juice. Immerse yourself in the tropical vibes with every sip. Ingredients: Vodka (50ml), Cola (100ml), Lime Juice (50ml)",
         "steps": [
-            ["P1-ON", 50, "P1-OFF"],
-            ["P6-ON", 100, "P6-OFF"],
-            ["P7-ON", 25, "P7-OFF"]
+            ["P1-ON", 25, "P1-OFF"],
+            ["P6-ON", 50, "P6-OFF"],
+            ["P7-ON", 15, "P7-OFF"]
         ]
     },
     {
@@ -34,8 +34,8 @@
         "image": "whisky&cola.PNG",
         "description": "Bold and invigorating, the Whisky z Colą combines the robust notes of whisky with the effervescence of cola. This classic duo is elevated with a modern twist, creating a drink that's both timeless and contemporary. Ingredients: Whisky (50ml), Cola (150ml)",
         "steps": [
-            ["P2-ON", 50, "P2-OFF"],
-            ["P6-ON", 150, "P6-OFF"]
+            ["P2-ON", 25, "P2-OFF"],
+            ["P6-ON", 75, "P6-OFF"]
         ]
     },
     {
@@ -43,9 +43,9 @@
         "image": "sexonthebeach.PNG",
         "description": "Escape to a tropical paradise with the Sex on the Beach cocktail. A delightful medley of vodka, peach schnapps, cranberry juice, and orange juice, this fruity concoction captures the essence of sun, sand, and sea breeze. Ingredients: Vodka (50ml), Whisky (100ml), Cranberry Juice (50ml)",
         "steps": [
-            ["P1-ON", 50, "P1-OFF"],
-            ["P4-ON", 100, "P4-OFF"],
-            ["P5-ON", 50, "P5-OFF"]
+            ["P1-ON", 25, "P1-OFF"],
+            ["P4-ON", 50, "P4-OFF"],
+            ["P5-ON", 25, "P5-OFF"]
         ]
     },
     {
@@ -53,8 +53,8 @@
         "image": "gimlet.PNG",
         "description": "Savor the crisp and refreshing taste of the Gimlet. This classic cocktail features the perfect balance of gin and lime juice, creating a zesty and invigorating drink that's a true testament to timeless mixology. Ingredients: Gin (50ml), Lime Juice (50ml)",
         "steps": [
-            ["P3-ON", 50, "P3-OFF"],
-            ["P7-ON", 25, "P7-OFF"]
+            ["P3-ON", 25, "P3-OFF"],
+            ["P7-ON", 15, "P7-OFF"]
         ]
     },
     {
@@ -62,9 +62,9 @@
         "image": "mimoza.PNG",
         "description": "Celebrate elegance with the A’la Mimoza cocktail. This effervescent blend of champagne and fresh orange juice is a tribute to the classic Mimosa, delivering a burst of citrusy delight with every sip. Ingredients: Vodka (50ml), Orange Juice (50ml), Tonic (100ml)",
         "steps": [
-            ["P1-ON", 50, "P1-OFF"],
-            ["P4-ON", 50, "P4-OFF"],
-            ["P8-ON", 100, "P8-OFF"]
+            ["P1-ON", 25, "P1-OFF"],
+            ["P4-ON", 25, "P4-OFF"],
+            ["P8-ON", 50, "P8-OFF"]
         ]
     },
     {
@@ -72,8 +72,8 @@
         "image": "wodka&cola.PNG",
         "description": "Embrace the bold flavors of Wódka z Colą, a fusion of vodka and cola that awakens your taste buds. This no-nonsense cocktail is a go-to choice for those who appreciate the classic combination of spirits and soda. Ingredients: Vodka (50ml), Cola (150ml)",
         "steps": [
-            ["P1-ON", 50, "P1-OFF"],
-            ["P6-ON", 150, "P6-OFF"]
+            ["P1-ON", 25, "P1-OFF"],
+            ["P6-ON", 75, "P6-OFF"]
         ]
     },
     {
@@ -81,9 +81,9 @@
         "image": "gin&cola.PNG",
         "description": "Elevate your evening with the Gin z Colą, a delightful blend of gin and cola that marries the botanical richness of gin with the effervescence of cola. It's a simple yet sophisticated choice for any occasion. Ingredients: Gin (50ml), Cola (100ml), Lime Juice (50ml)",
         "steps": [
-            ["P3-ON", 50, "P3-OFF"],
-            ["P6-ON", 100, "P6-OFF"],
-            ["P7-ON", 25, "P7-OFF"]
+            ["P3-ON", 25, "P3-OFF"],
+            ["P6-ON", 50, "P6-OFF"],
+            ["P7-ON", 15, "P7-OFF"]
         ]
     },
     {
@@ -91,11 +91,11 @@
         "image": "puke.PNG",
         "description": "Dare to be bold with the Puke cocktail. This unconventional mix of spirits packs a punch, combining unexpected flavors for a daring drinking experience. Not for the faint of heart, Puke is a fearless exploration of taste. Ingredients: Vodka (50ml), Whisky (30ml), Gin (50ml), Orange Juice (50ml), Cranberry Juice (20ml)",
         "steps": [
-            ["P1-ON", 50, "P1-OFF"],
-            ["P3-ON", 30, "P3-OFF"],
-            ["P4-ON", 50, "P4-OFF"],
-            ["P5-ON", 50, "P5-OFF"],
-            ["P7-ON", 20, "P7-OFF"]
+            ["P1-ON", 25, "P1-OFF"],
+            ["P3-ON", 15, "P3-OFF"],
+            ["P4-ON", 25, "P4-OFF"],
+            ["P5-ON", 25, "P5-OFF"],
+            ["P7-ON", 10, "P7-OFF"]
         ]
     },
     {
@@ -103,8 +103,8 @@
         "image": "strongwhiskysour.PNG",
         "description": "For those seeking an extra kick, indulge in the Strong Whisky Sour. This robust variation of the classic cocktail boasts a higher concentration of whiskey, creating a bold and intense flavor profile that demands attention. Ingredients: Whisky (100ml), Lemon/Lime Juice (50ml)",
         "steps": [
-            ["P1-ON", 100, "P1-OFF"],
-            ["P7-ON", 50, "P7-OFF"]
+            ["P1-ON", 50, "P1-OFF"],
+            ["P7-ON", 25, "P7-OFF"]
         ]
     },
     {
@@ -112,8 +112,8 @@
         "image": "crunbergin.PNG",
         "description": "Immerse yourself in the unique taste of Crunbergin, a distinctive blend of gin and cranberry. This unconventional cocktail offers a harmonious balance of botanicals and tartness, making it a memorable choice for adventurous palates. Ingredients: Gin (50ml), Cranberry Juice (150ml)",
         "steps": [
-            ["P3-ON", 50, "P3-OFF"],
-            ["P5-ON", 150, "P5-OFF"]
+            ["P3-ON", 25, "P3-OFF"],
+            ["P5-ON", 75, "P5-OFF"]
         ]
     },
     {
@@ -121,8 +121,8 @@
         "image": "gin&tonic.PNG",
         "description": "Elevate your spirits with the timeless Gin & Tonic. This classic highball cocktail features the crispness of gin and the effervescence of tonic water, garnished with a twist of lime. It's a refreshing and iconic choice for any occasion. Ingredients: Gin (50ml), Tonic (150ml)",
         "steps": [
-            ["P3-ON", 50, "P3-OFF"],
-            ["P8-ON", 150, "P8-OFF"]
+            ["P3-ON", 25, "P3-OFF"],
+            ["P8-ON", 75, "P8-OFF"]
         ]
     },
     {
@@ -130,9 +130,9 @@
         "image": "whisky&tonic.PNG",
         "description": "Experience the bold fusion of Whisky & Tonic, a contemporary take on the classic highball. This drink combines the rich, smoky notes of whisky with the crisp and bubbly essence of tonic water, creating a sophisticated libation. Ingredients: Whisky (50ml), Tonic (100ml), Lime Juice (50ml)",
         "steps": [
-            ["P2-ON", 50, "P2-OFF"],
-            ["P7-ON", 50, "P7-OFF"],
-            ["P8-ON", 100, "P8-OFF"]
+            ["P2-ON", 25, "P2-OFF"],
+            ["P7-ON", 25, "P7-OFF"],
+            ["P8-ON", 50, "P8-OFF"]
         ]
     },
     {
@@ -140,10 +140,10 @@
         "image": "room187.PNG",
         "description": "Step into the exclusive realm of Room 187 with the Host's Special cocktail. Crafted with secret ingredients and unparalleled finesse, this bespoke drink is a testament to the host's mastery in mixology. Indulge in a taste experience like no other. Ingredients: Vodka (50ml), Whisky (50ml), Cranberry Juice (30ml), Tonic (70ml)",
         "steps": [
-            ["P1-ON", 50, "P1-OFF"],
-            ["P5-ON", 50, "P5-OFF"],
-            ["P7-ON", 30, "P7-OFF"],
-            ["P8-ON", 70, "P8-OFF"]
+            ["P1-ON", 25, "P1-OFF"],
+            ["P5-ON", 25, "P5-OFF"],
+            ["P7-ON", 15, "P7-OFF"],
+            ["P8-ON", 35, "P8-OFF"]
         ]
     }
 ]
