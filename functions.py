@@ -125,7 +125,7 @@ def controlPump(self, pumpNumber, ONorOFF):
     # Open the serial connection
     with serial.Serial(pico_port, 115200, timeout=1) as ser:
         print("Controlling manually pump!")
-        msg = pumpNumber+"-"+ONorOFF
+        msg = pumpNumber+"-"+ONorOFF+"\n"
         if (ONorOFF == 'ON'):
             # ser.write(b'P1-ON\n')
             # msg = pumpNumber+"-"+ONorOFF
