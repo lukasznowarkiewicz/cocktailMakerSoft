@@ -89,12 +89,12 @@ def prepare_drink(self, drinkName):
 
         # Send 'hello world' over the serial port
         print("Preparing your drink!")
-        ser.write(b'P1-ON\n')
-        print("P1-ON\n")
-        ser.flush()
-        # time.sleep(3)
-        ser.write(b'P1-OFF\n')
-        print("P1-OFF\n")
+        # ser.write(b'P1-ON\n')
+        # print("P1-ON\n")
+        # ser.flush()
+        # # time.sleep(3)
+        # ser.write(b'P1-OFF\n')
+        # print("P1-OFF\n")
         # cosmo_details = self.get_cocktail_by_name(drinkName)
         cosmo_details = drinks.get_cocktail_by_name(drinkName)
         # frame_details.drinks.get_cocktail_by_name(drinkName)
