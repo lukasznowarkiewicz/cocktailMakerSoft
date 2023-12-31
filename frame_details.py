@@ -16,12 +16,11 @@ class Details(customtkinter.CTkFrame):
         # top frame with description and photo
         topFrame = customtkinter.CTkFrame(master=self, width=1024, height=600, fg_color="transparent", border_color="white")
         topFrame.pack(pady=50,padx=50, side="top")
-        self.label = customtkinter.CTkLabel(topFrame, text="This is page Details. It should be updated while choosing drink. If you are seeing this text, something malfunction.", compound="top", wraplength=400)
+        self.label = customtkinter.CTkLabel(topFrame, font=("arial", 22), text="This is page Details. It should be updated while choosing drink. If you are seeing this text, something malfunction.", compound="top", wraplength=400)
         self.label.pack(side="left", fill="x", pady=50,padx=50)
 
-
-        self.my_image = customtkinter.CTkImage(light_image=Image.open("cocktail.png"),
-                                  dark_image=Image.open("cocktail.png"),
+        self.my_image = customtkinter.CTkImage(light_image=Image.open("drinks/alafrench.PNG"),
+                                  dark_image=Image.open("drinks/alafrench.PNG"),
                                   size=(300, 300))
 
         self.image_label = customtkinter.CTkLabel(topFrame, image=self.my_image, text="")  # display image with a CTkLabel
@@ -47,5 +46,8 @@ class Details(customtkinter.CTkFrame):
     def updateValues(self, drinkName):
         updated_text = (drinks.get_cocktail_by_name(drinkName))['description']
         self.label.configure(text=updated_text)
+        imagePath=(drinks.get_cocktail_by_name(drinkName))['image']
+        self.my_image.configure(light_image=Image.open("drinks/"+imagePath))
+        self.my_image.configure(dark_image=Image.open("drinks/"+imagePath))
         print(f"Label description updated to: {updated_text}")
     
