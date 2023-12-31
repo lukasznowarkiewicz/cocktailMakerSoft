@@ -6,7 +6,8 @@ import functions
 import tkinter
 from functools import partial
 import time
-# from main import drinks
+# from frame_details import drinks
+import main
 
 
 class Preparing(customtkinter.CTkFrame):
@@ -18,8 +19,8 @@ class Preparing(customtkinter.CTkFrame):
 
         topFrame = customtkinter.CTkFrame(master=self, width=1024, height=600, fg_color="transparent", border_color="white")
         topFrame.pack(pady=50,padx=50, side="top")
-        self.my_image = customtkinter.CTkImage(light_image=Image.open("cocktail.png"),
-                                  dark_image=Image.open("cocktail.png"),
+        self.my_image = customtkinter.CTkImage(light_image=Image.open("drinks/alafrench.PNG"),
+                                  dark_image=Image.open("drinks/alafrench.PNG"),
                                   size=(300, 300))
 
         self.image_label = customtkinter.CTkLabel(topFrame, image=self.my_image, text="")  # display image with a CTkLabel
@@ -39,4 +40,11 @@ class Preparing(customtkinter.CTkFrame):
         
         self.labelSpacer = customtkinter.CTkLabel(bottomFrame, text="            ")
         self.labelSpacer.pack(side="bottom", fill="x", pady=10)
+
+    def updateValues(self, drinkName):
+        # main.drinks.get_cocktail_by_name
+        imagePath=(main.drinks.get_cocktail_by_name(drinkName))['image']
+        self.my_image.configure(light_image=Image.open("drinks/"+imagePath))
+        self.my_image.configure(dark_image=Image.open("drinks/"+imagePath))
+
         
