@@ -124,14 +124,21 @@ def controlPump(self, pumpNumber, ONorOFF):
     print(f"Raspberry Pi Pico found on port: {pico_port}")
     # Open the serial connection
     with serial.Serial(pico_port, 115200, timeout=1) as ser:
-        print("Preparing your drink!")
+        print("Controlling manually pump!")
+        msg = pumpNumber+"-"+ONorOFF
         if (ONorOFF == 'ON'):
-            ser.write(b'P1-ON\n')
-            print("P1-ON\n")
+            # ser.write(b'P1-ON\n')
+            # msg = pumpNumber+"-"+ONorOFF
+            # ser.write(b'')
+            ser.write(msg.encode('utf-8'))
+            print(msg)
             ser.flush()
         elif (ONorOFF == 'OFF'):
-            ser.write(b'P1-OFF\n')
-            print("P1-OFF\n")
+            # ser.write(b'P1-OFF\n')
+            # print("P1-OFF\n")
+            # ser.flush()
+            ser.write(msg.encode('utf-8'))
+            print(msg)
             ser.flush()
         else:
             return
