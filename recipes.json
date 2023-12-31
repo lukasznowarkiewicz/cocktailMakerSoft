@@ -43,9 +43,12 @@
         "image": "sexonthebeach.PNG",
         "description": "Escape to a tropical paradise with the Sex on the Beach cocktail. A delightful medley of vodka, peach schnapps, cranberry juice, and orange juice, this fruity concoction captures the essence of sun, sand, and sea breeze. Ingredients: Vodka (50ml), Whisky (100ml), Cranberry Juice (50ml)",
         "steps": [
+            ["P1-ON", 0, "P1-ON"],
+            ["P4-ON", 0, "P4-ON"],
+            ["P5-ON", 0, "P5-ON"],
             ["P1-ON", 25, "P1-OFF"],
-            ["P4-ON", 50, "P4-OFF"],
-            ["P5-ON", 25, "P5-OFF"]
+            ["P5-ON", 0, "P5-OFF"],
+            ["P4-ON", 25, "P4-OFF"]
         ]
     },
     {
