@@ -84,21 +84,11 @@ def prepare_drink(self, drinkName):
 
     # Open the serial connection
     with serial.Serial(pico_port, 115200, timeout=1) as ser:
-        # Wait for the connection to stabilize
-        # time.sleep(1)
-
-        # Send 'hello world' over the serial port
+        
         print("Preparing your drink!")
-        # ser.write(b'P1-ON\n')
-        # print("P1-ON\n")
-        # ser.flush()
-        # # time.sleep(3)
-        # ser.write(b'P1-OFF\n')
-        # print("P1-OFF\n")
-        # cosmo_details = self.get_cocktail_by_name(drinkName)
+        
         cosmo_details = drinks.get_cocktail_by_name(drinkName)
-        # frame_details.drinks.get_cocktail_by_name(drinkName)
-        # print({currentDrink['steps']})
+        
         if cosmo_details:
             print("\nDetails for Cosmopolitan:")
             print("Description:", cosmo_details['description'])
@@ -106,7 +96,6 @@ def prepare_drink(self, drinkName):
         else:
             print("\nCosmopolitan not found in the configuration. ", drinkName)
         for step in cosmo_details['steps']:
-            # ser.write(bytes(step[0] + '\n'))
             command = step[0] + '\n'
             ser.write(command.encode('utf-8'))
             print(command)
@@ -127,33 +116,15 @@ def controlPump(self, pumpNumber, ONorOFF):
         print("Controlling manually pump!")
         msg = pumpNumber+"-"+ONorOFF+"\n"
         if (ONorOFF == 'ON'):
-            # ser.write(b'P1-ON\n')
-            # msg = pumpNumber+"-"+ONorOFF
-            # ser.write(b'')
             ser.write(msg.encode('utf-8'))
             print(msg)
             ser.flush()
         elif (ONorOFF == 'OFF'):
-            # ser.write(b'P1-OFF\n')
-            # print("P1-OFF\n")
-            # ser.flush()
             ser.write(msg.encode('utf-8'))
             print(msg)
             ser.flush()
         else:
             return
-        
-        # cosmo_details = drinks.get_cocktail_by_name(drinkName)
-        # for step in cosmo_details['steps']:
-        #     # ser.write(bytes(step[0] + '\n'))
-        #     command = step[0] + '\n'
-        #     ser.write(command.encode('utf-8'))
-        #     print(command)
-        #     time.sleep(step[1])
-        #     command = step[2] + '\n'
-        #     ser.write(command.encode('utf-8'))
-        #     print(command)
-
             
 def clean_cache():  
     # Remove the contents of the __pycache__ directories
