@@ -6,18 +6,12 @@ import functions
 import tkinter
 from functools import partial
 
-
-
 class StartPage(customtkinter.CTkFrame):
     def __init__(self, parent, controller):
         customtkinter.CTkFrame.__init__(self, parent)
         self.controller = controller
         self.configure(self, width=1020, height=580, corner_radius=0, fg_color="transparent")
-        # self.grid_rowconfigure(9, weight=10)
-        # self.grid_columnconfigure(6, weight=1)
-
-
-
+        
         # json data import of the recipes
         with open('recipes.json', 'r') as recipes_json:
             recipes_data = json.load(recipes_json)
@@ -29,7 +23,6 @@ class StartPage(customtkinter.CTkFrame):
             self.image = customtkinter.CTkImage(Image.open(os.path.join("drinks", button_data["image"])), size=(95, 120))
             label.append(button_data["label"])
             print(f"Label {label[idx]}")
-            # image = button_data["image"]
             button_array.append(customtkinter.CTkButton(self, image=self.image, fg_color="transparent", text=label[idx], compound="top", font=("arial", 18), border_spacing=10, command=lambda l=label[idx]:  controller.show_frame("Details", l)))
             button_array[idx].grid(row=idx // 5, column=idx % 5, padx=5, pady=5)
             button_array[idx].configure(height = 180, width = 192)
