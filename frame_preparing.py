@@ -6,7 +6,6 @@ import functions
 import tkinter
 from functools import partial
 import time
-# from frame_details import drinks
 import main
 
 
@@ -29,10 +28,9 @@ class Preparing(customtkinter.CTkFrame):
         # bottom frame with buttons
         bottomFrame = customtkinter.CTkFrame(master=self, width=1200, height=200, fg_color="transparent", border_color="white")
         bottomFrame.pack(pady=50,padx=50, side="bottom")
-        # self.label.con
         self.button = customtkinter.CTkButton(bottomFrame, font=("lato", 22), text="Return to start screen", width=400, height=60, 
                            command=lambda: controller.show_frame("StartPage"))
-        # self.button.grid(sticky="nsew", row=1, column=4)
+        
         self.button.pack(side="left", pady=10)
         self.button2 = customtkinter.CTkButton(bottomFrame, font=("lato", 22), text="Start",  width=400, height=60, 
                            command=lambda: functions.prepare_drink(self, self.currentDrink))
@@ -42,7 +40,6 @@ class Preparing(customtkinter.CTkFrame):
         self.labelSpacer.pack(side="bottom", fill="x", pady=10)
 
     def updateValues(self, drinkName):
-        # main.drinks.get_cocktail_by_name
         imagePath=(main.drinks.get_cocktail_by_name(drinkName))['image']
         self.my_image.configure(light_image=Image.open("drinks/"+imagePath))
         self.my_image.configure(dark_image=Image.open("drinks/"+imagePath))
